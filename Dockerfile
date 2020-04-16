@@ -22,8 +22,8 @@ RUN \
 #  add-apt-repository -y ppa:webupd8team/java && \
   add-apt-repository ppa:openjdk-r/ppa && \
   apt-get update && \
-  apt-get install openjdk-8-jdk && \
-  apt-get install oracle-java8-set-default && \
+  apt-get install -y openjdk-8-jdk && \
+  apt-get install -y oracle-java8-set-default && \
   java --version
 #  apt-get install -y oracle-java8-installer && \
 #  rm -rf /var/lib/apt/lists/* && \
