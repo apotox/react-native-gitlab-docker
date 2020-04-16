@@ -1,14 +1,15 @@
 FROM openjdk:8
 
 LABEL MAINTAINER SAPHI
-LABEL VERSION 1
+LABEL VERSION 1.1
 LABEL AUTHOR_EMAIL saphidev@gmail.com
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 RUN apt-get update && apt-get -y install nodejs unzip
+
 # ENV VARIABLES
 ENV SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" \
     ANDROID_HOME="/usr/local/android-sdk" \
-    ANDROID_VERSION=27 \
+    ANDROID_VERSION=28 \
     ANDROID_BUILD_TOOLS_VERSION=28.0.3\
     GRADLE_VERSION=6.1.1\
     MAVEN_VERSION=3.6.3
