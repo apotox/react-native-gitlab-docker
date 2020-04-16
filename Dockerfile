@@ -22,14 +22,16 @@ RUN \
 #  add-apt-repository -y ppa:webupd8team/java && \
   add-apt-repository ppa:openjdk-r/ppa && \
   apt-get update && \
-  sudo apt-get install openjdk-8-jdk && \
+  apt-get install openjdk-8-jdk && \
+  apt-get install oracle-java8-set-default && \
+  java --version
 #  apt-get install -y oracle-java8-installer && \
 #  rm -rf /var/lib/apt/lists/* && \
 #  rm -rf /var/cache/oracle-jdk8-installer
 
 
-# Define commonly used JAVA_HOME variable
-ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
+# Define commonly used JAVA_HOME variable /usr/lib/jvm/java-1.8.0-openjdk-amd64
+#ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 
 # ——————————
