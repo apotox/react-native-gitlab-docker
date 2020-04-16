@@ -61,7 +61,7 @@ RUN cd /opt && \
     tar -xzf ${ANDROID_SDK_FILENAME} && \
     rm ${ANDROID_SDK_FILENAME} && \
     echo y | android update sdk --no-ui -a --filter tools,platform-tools,${ANDROID_API_LEVELS},${ANDROID_BUILD_TOOLS_VERSION} && \
-    echo y | android update sdk --no-ui --all --filter "${ANDROID_EXTRA_COMPONENTS}" && \
+    echo y | android update sdk --no-ui --all --filter ${ANDROID_EXTRA_COMPONENTS} && \
     echo y | android --silent update sdk --no-ui --all --filter android-${ANDROID_COMPILE_SDK} && \
     echo y | android --silent update sdk --no-ui --all --filter platform-tools && \
     echo y | android --silent update sdk --no-ui --all --filter extra-android-m2repository && \
@@ -91,7 +91,7 @@ ENV PATH $PATH:$GRADLE_HOME/bin
 # ——————————
 # Install Node and global packages
 # ——————————
-ENV NODE_VERSION 10
+ENV NODE_VERSION 8
 RUN cd && \
     wget -q http://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz && \
     tar -xzf node-v${NODE_VERSION}-linux-x64.tar.gz && \
